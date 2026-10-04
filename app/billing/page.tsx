@@ -1,0 +1,1 @@
+export default function Page(){return <main><h1>Billing</h1><p>FoundPath Household subscription management.</p></main>}
