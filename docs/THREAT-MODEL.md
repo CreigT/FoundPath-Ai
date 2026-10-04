@@ -1,0 +1,2 @@
+# Threat Model
+Primary threats: token enumeration, tenant crossover, impersonation, malicious uploads, EXIF leakage, finder spam, harassment, phishing, prompt injection, forged webhooks and unauthorized location disclosure. Controls include random opaque tokens, RLS, server authorization, private storage, validation/scanning, metadata stripping, abuse controls, schema-validated AI output and human approval.
