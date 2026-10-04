@@ -1,0 +1,1 @@
+export default function Page(){return <main><h1>Activity</h1><p>Recovery and security audit history.</p></main>}
