@@ -1,0 +1,1 @@
+export default function Home(){return <main><h1>FoundPath AI</h1><p>Recover lost belongings without publicly exposing private contact information.</p><p><strong>Sponsored by CREIGNIFICENT LLC.</strong></p></main>}
