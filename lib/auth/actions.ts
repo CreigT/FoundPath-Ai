@@ -1,0 +1,4 @@
+"use server"; import { redirect } from "next/navigation"; import { supabaseServer } from "./server";
+export async function signUp(fd:FormData){const s=await supabaseServer();const email=String(fd.get("email")||"");const password=String(fd.get("password")||"");const {error}=await s.auth.signUp({email,password});if(error) redirect("/signup?error="+encodeURIComponent(error.message));redirect("/dashboard")}
+export async function signIn(fd:FormData){const s=await supabaseServer();const {error}=await s.auth.signInWithPassword({email:String(fd.get("email")||""),password:String(fd.get("password")||"")});if(error) redirect("/login?error="+encodeURIComponent(error.message));redirect("/dashboard")}
+export async function signOut(){const s=await supabaseServer();await s.auth.signOut();redirect("/")}
