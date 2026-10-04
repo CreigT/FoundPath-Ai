@@ -1,0 +1,1 @@
+export default function Page(){return <main><h1>Items</h1><p>Register and manage protected items.</p></main>}
