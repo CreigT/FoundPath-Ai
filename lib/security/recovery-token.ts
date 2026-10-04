@@ -1,0 +1,3 @@
+import { randomBytes, createHash } from "crypto";
+export function createRecoveryToken(){return randomBytes(32).toString("base64url");}
+export function hashRecoveryToken(token:string){return createHash("sha256").update(token).digest("hex");}
