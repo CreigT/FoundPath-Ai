@@ -1,0 +1,2 @@
+# Privacy
+Public recovery pages must never expose owner name, email, phone, home address, private serial number, purchase record, hidden verification answer, or photo metadata. Exact location sharing is opt-in. Collect the minimum data required and support account/data deletion.
