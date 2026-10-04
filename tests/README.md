@@ -1,0 +1,2 @@
+# Security test plan
+Required before production: authentication, tenant isolation, unpredictable QR tokens, unauthorized item access, malicious uploads, metadata removal, AI uncertainty, prompt injection, spam reports, message abuse, forged webhooks, duplicate recovery events, disabled-agent behavior, deletion, and persistent storage.
