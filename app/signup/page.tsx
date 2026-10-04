@@ -1,0 +1,1 @@
+export default function Page(){return <main><h1>Create account</h1><p>Register securely with FoundPath AI.</p></main>}
