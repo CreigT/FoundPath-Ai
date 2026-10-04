@@ -1,0 +1,1 @@
+export function recoveryUrl(origin:string,token:string){return new URL("/recover/"+encodeURIComponent(token),origin).toString();}
