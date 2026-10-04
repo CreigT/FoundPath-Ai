@@ -1,0 +1,2 @@
+# Security
+Zero trust and least privilege are defaults. Enforce server authorization and Supabase RLS. Never expose service-role keys to browsers. Recovery tokens must be high-entropy, revocable, rate-limited and stored hashed. Private media uses short-lived signed URLs. Validate uploads, remove metadata, scan for malware, rate-limit public endpoints, defend AI inputs from prompt injection, verify Stripe signatures and maintain audit events.
