@@ -1,0 +1,1 @@
+export default function Page(){return <main><h1>Finder Reports</h1></main>}
