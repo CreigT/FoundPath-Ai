@@ -1,0 +1,10 @@
+create extension if not exists pgcrypto;
+create table if not exists public.items (id uuid primary key default gen_random_uuid(), owner_id uuid not null references auth.users(id) on delete cascade, name text not null, description text, created_at timestamptz not null default now());
+create table if not exists public.recovery_tags (id uuid primary key default gen_random_uuid(), item_id uuid not null references public.items(id) on delete cascade, token_hash text not null unique, active boolean not null default true, created_at timestamptz not null default now());
+create table if not exists public.finder_reports (id uuid primary key default gen_random_uuid(), item_id uuid not null references public.items(id) on delete cascade, message text, status text not null default 'pending', created_at timestamptz not null default now());
+create table if not exists public.audit_events (id uuid primary key default gen_random_uuid(), owner_id uuid references auth.users(id) on delete set null, action text not null, resource_type text not null, resource_id uuid, created_at timestamptz not null default now());
+alter table public.items enable row level security; alter table public.recovery_tags enable row level security; alter table public.finder_reports enable row level security; alter table public.audit_events enable row level security;
+create policy "owners read items" on public.items for select using (auth.uid()=owner_id);
+create policy "owners insert items" on public.items for insert with check (auth.uid()=owner_id);
+create policy "owners update items" on public.items for update using (auth.uid()=owner_id) with check (auth.uid()=owner_id);
+create policy "owners delete items" on public.items for delete using (auth.uid()=owner_id);
