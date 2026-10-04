@@ -1,1 +1,1 @@
-export default function Page(){return <main><h1>Create account</h1><p>Register securely with FoundPath AI.</p></main>}
+import { signUp } from "../../lib/auth/actions";export default function Page(){return <main><h1>Create account</h1><form action={signUp}><label>Email <input name="email" type="email" required autoComplete="email"/></label><label>Password <input name="password" type="password" required minLength={8} autoComplete="new-password"/></label><button type="submit">Create account</button></form><p>You may need to confirm your email before signing in.</p></main>}
