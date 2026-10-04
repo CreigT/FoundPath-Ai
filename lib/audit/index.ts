@@ -1,0 +1,1 @@
+export type AuditEvent={actorId:string|null;action:string;resourceType:string;resourceId:string;createdAt:string};
