@@ -1,0 +1,1 @@
+export default async function Page({params}:{params:Promise<{token:string}>}){const {token}=await params;return <main><h1>Found an item?</h1><p>Use this protected page to contact the owner without exchanging private contact information.</p><small>Recovery token received: {token?"valid request":"invalid"}</small></main>}
